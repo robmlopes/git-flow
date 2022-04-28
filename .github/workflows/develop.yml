@@ -27,7 +27,9 @@ jobs:
 
   web-deploy-dev:
     name: 🎉 Deploy
+    needs: build-dev
     runs-on: ubuntu-latest
+    environment: dev
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
