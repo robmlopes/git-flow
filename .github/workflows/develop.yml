@@ -35,8 +35,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server-dir: POC-DEV/
-        server: ftp.dlptest.com
-        username: dlpuser
-        password: rNrKYTX9g7z3RgJRmxWuGHbeu
+        server-dir: ${{ secrets.ftp_dir }}
+        server: ${{ secrets.ftp_server }}
+        username: ${{ secrets.ftp_user }}
+        password: ${{ secrets.ftp_pass }}
      
